@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      args:
+        REPO_URL: BACKEND_REPO
+        BRANCH: BACKEND_BRANCH
+    container_name: backend
+    ports:
+      - "BACKEND_PORT:8080"
+    restart: unless-stopped
+    environment:
+      - SPRING_PROFILES_ACTIVE=production
