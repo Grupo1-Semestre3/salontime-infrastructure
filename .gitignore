@@ -1,0 +1,84 @@
+# Environment
+.env
+*.env
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# State
+state.json
+state.json.backup
+
+# SSH Keys
+*.pem
+*.key
+
+# AWS
+.aws/
+
+# Backups
+backups/
+*.backup
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+# 1. Clonar o repositório
+git clone https://github.com/Grupo1-Semestre3/salontime-infrastructure.git
+cd salontime-infrastructure
+
+# 2. Criar estrutura de diretórios
+mkdir -p scripts utils docker/{frontend,backend,botpress} user-data sql config docs logs
+
+# 3. Criar arquivos iniciais vazios (placeholder)
+touch README.md
+touch .gitignore
+touch install-salontime.sh
+touch configure.sh
+touch .env.example
+
+# 4. Criar .gitignore básico agora
+cat > .gitignore << 'EOF'
+# Environment
+.env
+*.env
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# State
+state.json
+state.json.backup
+
+# SSH Keys
+*.pem
+*.key
+
+# AWS
+.aws/
+
+# Backups
+backups/
+*.backup
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+tmp/
+temp/
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
